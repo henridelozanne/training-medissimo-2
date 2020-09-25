@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <h1>{{ title }}</h1>
+    <h2>{{ title }}</h2>
     <div :id="id" style="width: 100%; height: 500px;"></div>
   </div>
 </template>

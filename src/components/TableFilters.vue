@@ -68,7 +68,7 @@ export default {
   align-items: center;
   border-radius: 7px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgb(213, 232, 233);
+  border: 2px solid rgb(222, 239, 240);
 }
 
 .select-ctn {

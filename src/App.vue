@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <CustomTable :title="customTable.title"
+    <CustomTable :header="customTable.header"
+                 :subheader="customTable.subheader"
                  :tableData="customTable.tableData" />
     <StackedColumn
         :id="stackedColumn.id"
@@ -59,7 +60,8 @@ export default {
   data() {
     return {
       customTable: {
-        title: 'Chiffre d\'affaires | Évolution détaillée de l\'activité PDA',
+        header: 'Chiffre d\'affaires',
+        subheader: 'Évolution détaillée de l\'activité PDA',
         tableData: [{
             year: '2020',
             month: '01',
@@ -354,7 +356,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -365,6 +372,7 @@ export default {
 
 .section {
   height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -372,7 +380,24 @@ export default {
   position: relative;
 }
 
-.section h1 {
+.section h2 {
   margin-bottom: 0;
+}
+
+.stat-header-ctn {
+  width: 90%;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0;
+
+  .stat-icon {
+    margin-right: 10px;
+  }
+
+  .arrow-icon {
+    margin: 0 10px;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <h1>{{ title }}</h1>
+    <h2>{{ title }}</h2>
     <div :id="id" style="width: 100%; height: 800px;"></div>
     <h3 v-if="emptyCenter" class="total-displayed">{{ totalDisplayed }}</h3>
     <p v-if="bottomInfo" class="bottom-info">{{ bottomInfo }}</p>
